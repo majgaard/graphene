@@ -1,6 +1,5 @@
 from graphql import graphql_sync
-
-from graphene.tests.utils import dedent
+from graphql.pyutils import dedent
 
 from ...types import Interface, ObjectType, Schema
 from ...types.scalars import Int, String

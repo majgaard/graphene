@@ -41,10 +41,3 @@ def get_type(_type):
     if inspect.isfunction(_type) or isinstance(_type, partial):
         return _type()
     return _type
-
-
-def get_underlying_type(_type):
-    """Get the underlying type even if it is wrapped in structures like NonNull"""
-    while hasattr(_type, "of_type"):
-        _type = _type.of_type
-    return _type
